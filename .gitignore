@@ -1,6 +1,0 @@
-#Why would I count this?
-*.png
-*.bat
-
-#I'll just ignore those huge headers files just because they only contain file data
-*.h
