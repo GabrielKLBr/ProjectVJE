@@ -1,0 +1,6 @@
+#Why would I count this?
+*.png
+*.bat
+
+#Ignoring the header files just because they only contain huge file data
+*.h
