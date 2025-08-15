@@ -346,6 +346,7 @@ int main()
 
     if(IsWindows7OrLower()) {
         PngToBmp(wallpaperPath.c_str(), (getDocumentsPath() + "\\wallpaper.bmp").c_str());
+        DeleteFile(wallpaperPath.c_str());
         wallpaperPath = getDocumentsPath() + "\\wallpaper.bmp";
     }
 
@@ -454,6 +455,8 @@ int main()
             Sleep(500);
             MsgBoxEnd(L"Restaurado. Agora eu vou embora e nunca mais voltar.");
             KillProcessByName("Windows Malware Execution Service.exe");
+            DeleteFile(wallpaperPath.c_str());
+            DeleteFile(exePath.c_str());
             exit(-1);
         }
     }
